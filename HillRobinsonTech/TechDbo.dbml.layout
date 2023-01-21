@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 27, 26.25" name="TechDbo">
+  <DataContextMoniker Name="/TechDboDataContext" />
+  <nestedChildShapes>
+    <classShape Id="75a8439b-b6bd-4252-be03-9947c95fb560" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/TechDboDataContext/AppInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c549a2b8-2e3c-40bd-938c-26aa1b5a1c2b" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c78cb99-9d51-4115-a816-b4e39e4d2d88" absoluteBounds="3.75, 0.75, 2, 6.7707340494791666">
+      <DataClassMoniker Name="/TechDboDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b152b731-085b-4961-bb64-0378b175a475" absoluteBounds="3.765, 1.21, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00c2e3b6-980e-4a57-99f8-11906951735c" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TechDboDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9432750b-2bd8-4bbe-913e-30b0c7f904ef" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="920f0c93-36d5-4802-82fa-d824a9e09d94" absoluteBounds="6.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/TechDboDataContext/HistoryLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="781c64d6-e9c4-43a9-88ee-456f1bdcdca1" absoluteBounds="6.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbd8148e-df2d-4341-a1e4-635ba017c431" absoluteBounds="6.75, 7.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/TechDboDataContext/InventoryAlYamama" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b5e9687-9a68-4872-ab1d-be38a8aa30db" absoluteBounds="6.765, 8.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0364183-c529-4090-aa47-d71019ce4df6" absoluteBounds="0.75, 8.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/TechDboDataContext/InventorySharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09e1b0b3-3a7d-49d8-8f16-02d80bf9c3fe" absoluteBounds="0.765, 9.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a7d0207-3f24-4a67-a8ec-9338def560b1" absoluteBounds="9.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/TechDboDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b91a0aa8-2b42-42b1-9d40-5dbe011fcc60" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20b6c9e3-ac23-4237-acfd-5c9088ffb109" absoluteBounds="9.75, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/TechDboDataContext/Notification" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b0a7d2b-8489-495b-bf46-aad467cb30b7" absoluteBounds="9.765, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be326e61-dea8-4b99-96b3-054b101865bd" absoluteBounds="9.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/TechDboDataContext/Permission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ada7b2e-bca0-4dfa-b928-2f1ff6b83ec3" absoluteBounds="9.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d91035ce-543d-4276-94ad-2b5e6ec37702" absoluteBounds="9.75, 11.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TechDboDataContext/Project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17a97bb3-8067-442a-bb52-2534a079b995" absoluteBounds="9.765, 12.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d861fac-fabb-427d-9aee-8742f23f1649" absoluteBounds="12.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/TechDboDataContext/Report" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2f4aca2-671e-455a-a3ac-33dffdafd618" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f1d4b4f-4f7d-4d4c-854f-d749c7fcb884" absoluteBounds="12.75, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TechDboDataContext/RolePermission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17aa1854-bc5e-4ab8-86da-5ec4d4a98edb" absoluteBounds="12.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7b5c795-7843-4e67-8b49-ff928b272788" absoluteBounds="12.75, 7.75, 2, 3.1170068359375014">
+      <DataClassMoniker Name="/TechDboDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43cf6e0b-7715-45c9-83b6-1090df34f88e" absoluteBounds="12.765, 8.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19219048-4e0a-407f-98cd-d2ff43dade24" absoluteBounds="12.75, 11.75, 2, 8.8860498046875023">
+      <DataClassMoniker Name="/TechDboDataContext/TechInTTrackerNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec877491-dec4-4824-8fe9-ac7c12030bcb" absoluteBounds="12.765, 12.21, 1.9700000000000002, 8.3260498046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8564912c-6506-46bf-861c-07455ad6e682" absoluteBounds="3.75, 14.75, 2, 8.8860498046875023">
+      <DataClassMoniker Name="/TechDboDataContext/TechInTTrackerNewImportExcel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54f728b4-33c4-479b-85c3-ada609bca47b" absoluteBounds="3.765, 15.21, 1.9700000000000002, 8.3260498046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c0e8325-4bd6-4fe0-8b78-02314ec468ab" absoluteBounds="6.75, 14.75, 2, 11.193666992187502">
+      <DataClassMoniker Name="/TechDboDataContext/TechIntTrackerSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80b8d731-f8a5-4ec7-a080-1d15f5485202" absoluteBounds="6.765, 15.21, 1.9700000000000002, 10.6336669921875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="286c1335-bacd-4147-99b4-409074ff85a9" absoluteBounds="15.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TechDboDataContext/UserPermission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3614aa04-2cf0-4dd4-bd16-3b63fd49a960" absoluteBounds="15.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c62c2805-6c02-4351-9520-ec658b4512a2" absoluteBounds="15.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TechDboDataContext/UserProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e85044f0-8b5b-4706-85b9-dc712ea491eb" absoluteBounds="15.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48ef4083-edfa-48a6-b777-c3f1421245ef" absoluteBounds="15.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TechDboDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d48a29fd-9de4-4d70-9e32-175ba2092d8a" absoluteBounds="15.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09e0a995-8f44-4e1e-9b4b-8276bbc71d1a" absoluteBounds="15.75, 9.75, 2, 7.7322412109375023">
+      <DataClassMoniker Name="/TechDboDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f43023c-2acb-4a74-8227-ed6681c01f91" absoluteBounds="15.765, 10.21, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3a369cc-d2d6-4ed1-9d25-8036086d240d" absoluteBounds="18.75, 0.75, 2, 10.424461263020831">
+      <DataClassMoniker Name="/TechDboDataContext/TechIntTracker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da6a8b20-119d-4161-ba16-ae058e8a26e1" absoluteBounds="18.765, 1.21, 1.9700000000000002, 9.8644612630208321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd6338a2-4702-4ccf-8274-39db4c8cb2dd" absoluteBounds="18.75, 12.75, 2, 10.424461263020831">
+      <DataClassMoniker Name="/TechDboDataContext/TechIntTrackerArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df0a25fe-e46a-4439-b266-7732e38fe036" absoluteBounds="18.765, 13.21, 1.9700000000000002, 9.8644612630208321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b27f78a4-3502-4534-8a79-a0843b79c8f1" absoluteBounds="21.75, 0.75, 2, 16.385805664062502">
+      <DataClassMoniker Name="/TechDboDataContext/ICTReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="708408e0-9620-423f-9584-a79c9777cbc3" absoluteBounds="21.765, 1.21, 1.9700000000000002, 15.8258056640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4502543-b0ee-4c9e-a3a4-fa407f9c81b7" absoluteBounds="0.75, 3.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/AssignedToFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0788c7e-b90f-4f88-9988-96c1e355eaf8" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df2044dd-84e4-499b-a062-58002aec5f10" absoluteBounds="0.75, 5.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/DepartmentEsomFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45e363ec-fd82-46d1-8177-bdadd1d57e38" absoluteBounds="0.765, 6.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d6d2e49-8f40-4821-9b19-abbfecfe1e54" absoluteBounds="3.75, 8.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/DepartmentRefFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de4f1ab4-2e0c-4e4b-afb8-e83cde1a1694" absoluteBounds="3.765, 9.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5803a0ba-0c0d-4a85-ada8-40b58ce385b8" absoluteBounds="3.75, 10.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/EscalatedToFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38843418-f124-453a-ac1b-dc1e3d066380" absoluteBounds="3.765, 11.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efe7ca57-70ad-4ad0-a44f-b1556f7f4bbe" absoluteBounds="3.75, 12.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationDetailsFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8aee0455-0ecc-4dc7-a6fa-0a4cb779905c" absoluteBounds="3.765, 13.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d59a864f-a6c9-4c23-abef-1a431920fd84" absoluteBounds="9.75, 14.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationDetailsSharmaFilteer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb5f515a-acaf-4407-bd79-401e341947c6" absoluteBounds="9.765, 15.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35146e92-c827-44c9-83e1-9f7f4bbbb0ad" absoluteBounds="0.75, 15.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28680e6c-6815-456f-bcfd-03b5084f42c3" absoluteBounds="0.765, 16.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9f73283-4afa-4dab-9835-db7119fa5bf5" absoluteBounds="9.75, 16.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a84958a3-309d-4d8b-ab06-6e1d5d54df58" absoluteBounds="9.765, 17.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1fe569f5-74b4-4bbe-8726-0ab985ec6383" absoluteBounds="0.75, 17.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/PriorityFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d20d388f-2a12-4200-b332-74e717a0b506" absoluteBounds="0.765, 18.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d164d29a-c7fe-4e3c-986c-ac783c3dde70" absoluteBounds="9.75, 18.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/PriorityFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="842fefb9-62e2-4d9c-b42f-ec2c416b3295" absoluteBounds="9.765, 19.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d99d1f1-a8c1-4d36-86d3-0508d39fdb42" absoluteBounds="15.75, 18.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/ReportedByFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33c47fe6-5486-4503-b501-4f72c206bcbc" absoluteBounds="15.765, 19.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2770ac2e-e3d2-4b3b-89bf-4bccb59f0530" absoluteBounds="0.75, 19.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/ReportedByFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5551e802-1416-46fb-ad99-85c33a2fb4da" absoluteBounds="0.765, 20.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e31d5b95-0bb8-4a82-b066-de2c67e7dc25" absoluteBounds="9.75, 20.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/SpecLocationFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbc855e1-5640-41fd-8321-da85da17ba8b" absoluteBounds="9.765, 21.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50b673b9-12f0-4342-a70d-f25396bd9da8" absoluteBounds="15.75, 20.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/SpecLocationSharmaFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce7604e2-6a52-497e-b9d2-a9842bfdd579" absoluteBounds="15.765, 21.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ae734df-ecd8-4d4d-9650-ea387a0fab82" absoluteBounds="0.75, 21.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/StatusFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7d5993b-0177-400d-84bb-b94785e4898e" absoluteBounds="0.765, 22.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c6a23a7-fc34-4fcc-986a-de8ec78d2cd2" absoluteBounds="21.75, 18.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/StatusFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41ba08d1-07b5-40a9-a9a6-1c1f08911778" absoluteBounds="21.765, 19.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce910759-5dbc-4415-9f0b-b570e3b93331" absoluteBounds="21.75, 20.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/SubLocationFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f45124e-f561-4348-9ccb-5fadf6abaa80" absoluteBounds="21.765, 21.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebf1332c-c1e3-4d26-94f2-0874cf074f98" absoluteBounds="9.75, 22.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/SubLocationSharmaFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf38e55b-0405-46b7-98d0-f1cf9bd6642b" absoluteBounds="9.765, 23.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c37cf26f-5219-49cd-8c26-54ac42bc56b5" absoluteBounds="12.75, 22.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/TypeFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe55d9c2-9fc4-4317-a6f3-adc6491bbd4c" absoluteBounds="12.765, 23.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34d016c3-c9bc-4f98-bb25-ba3152bb099d" absoluteBounds="15.75, 22.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/TypeFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cde07781-1205-42b0-b97f-6c965806b224" absoluteBounds="15.765, 23.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46d6a1ae-36eb-4976-8f2b-223cb5f98a53" absoluteBounds="21.75, 22.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/ClosedByFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="551da901-5163-4441-9fc3-47fcd1fc18e8" absoluteBounds="21.765, 23.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd686606-dbf8-419d-a001-74deb56bc5cb" absoluteBounds="0.75, 23.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/ClosedByFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41da16bf-80fe-44cd-9b75-8f8c8b0de781" absoluteBounds="0.765, 24.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a73fdcf-0054-4c4a-b5e9-4a82c53ec831" absoluteBounds="24.75, 0.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/CompletedByFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af0cf189-eddc-4cfc-9f41-125f028429ce" absoluteBounds="24.765, 1.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="365c74d8-533a-47ef-a9e2-bb3295b43f7a" absoluteBounds="24.75, 2.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/CompletedByFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71ca0170-14d6-415b-9597-6668ecd88a59" absoluteBounds="24.765, 3.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfeecb89-c8ae-4aa8-ad41-9efb0a4561a9" absoluteBounds="3.75, 24.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/DepartmentEsomFilterSharma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0529a473-35fc-4cd3-a43c-7669f5e7b387" absoluteBounds="3.765, 25.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e25afcd4-cc0b-4ee8-82b2-53602d21e46e" absoluteBounds="24.75, 4.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationBuildingAYFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c37a5582-b816-4469-8ca3-6571020e3da7" absoluteBounds="24.765, 5.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a7fe32a-8a5d-49a5-9b83-e9c4d1a29dde" absoluteBounds="24.75, 6.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TechDboDataContext/LocationBuildingSharmaFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d190928-a3bb-4728-818e-7fde430e2571" absoluteBounds="24.765, 7.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

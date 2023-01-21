@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="florent_hillrobinsontech_local" Class="TechDboDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=&quot;10.19.107.154, 1433&quot;;Initial Catalog=florent_hillrobinsontech_local;Persist Security Info=True;User ID=sa" SettingsObjectName="HillRobinsonTech.Properties.Settings" SettingsPropertyName="florent_hillrobinsontech_localConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="avitsql.AppInfo" Member="AppInfos">
+    <Type Name="AppInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AppName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Version" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BackwardCompatibleVersion" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="System" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Contacts" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="userId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="workPhoneNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="workPhoneDetails" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="workEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="persPhoneNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="persEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ContactLocation" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedByHostMachine" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedByHostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CreatedByIPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedByWindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdatedByHostMachine" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateByHostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UpdatedByIPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedByWindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InactiveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Departments" Member="Departments">
+    <Type Name="Department">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.HistoryLog" Member="HistoryLogs">
+    <Type Name="HistoryLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Action" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TableInvolved" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.InventoryAlYamama" Member="InventoryAlYamamas">
+    <Type Name="InventoryAlYamama">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UOM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechStorage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechStorageDetails" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OtherStorage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherStorageDetails" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase1Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase2Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase3Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase4Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase5Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase6" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase6Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.InventorySharma" Member="InventorySharmas">
+    <Type Name="InventorySharma">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UOM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechStorage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechStorageDetails" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OtherStorage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherStorageDetails" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase1Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase2Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase3Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase4Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase5Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TravelCase6" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TravelCase6Details" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Locations" Member="Locations">
+    <Type Name="Location">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriorityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Project" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuildingId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Sublocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HKSpecificLocationAlias" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FBSpecificLocationAlias" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AHU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ICTReport" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Notifications" Member="Notifications">
+    <Type Name="Notification">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrackId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SeenTrack" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Permissions" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Reports" Member="Reports">
+    <Type Name="Report">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportingType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PreviousWeekId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekStartOpenWO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RaisedWO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClosedWO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekEndedOpenWO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.RolePermission" Member="RolePermissions">
+    <Type Name="RolePermission">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriorityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.TechInTTrackerNew" Member="TechInTTrackerNews">
+    <Type Name="TechInTTrackerNew">
+      <Column Name="TrackId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IssueDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueByDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysOpen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EscalationComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DepartmentInternal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TechnicianAssigned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EsomRef" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationComplDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="InspectionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DLP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationCPPA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.TechInTTrackerNewImportExcel" Member="TechInTTrackerNewImportExcels">
+    <Type Name="TechInTTrackerNewImportExcel">
+      <Column Name="TrackId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IssueDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueByDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysOpen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EscalationComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DepartmentInternal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TechnicianAssigned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EsomRef" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationComplDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="InspectionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DLP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationCPPA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.TechIntTrackerSharma" Member="TechIntTrackerSharmas">
+    <Type Name="TechIntTrackerSharma">
+      <Column Name="TrackId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CompletionLevel" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DuringAfterVisit" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IssueDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueByDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysOpen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="[Assigned ToPerson]" Member="Assigned_ToPerson" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EscalationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EsomRef" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ActionPlan" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalationComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TechnicianAssigned" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationComplDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MaterialsNeeded" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FollowUp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HLRFinalReport" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContractorFReport" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Testing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VersionDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DLP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationCPPA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepartmentInternal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ReportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InspectionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.UserPermission" Member="UserPermissions">
+    <Type Name="UserPermission">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PermissionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.UserProfile" Member="UserProfiles">
+    <Type Name="UserProfile">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intTrackerOptions" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.UserRole" Member="UserRoles">
+    <Type Name="UserRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DefaultProject" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SendEmailUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SendEmailPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PersonalEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ProfileID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedByHostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CreatedByHostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CreatedByIPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedByWindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedByWindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastTimeLogged" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastTimeLoggedOut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastTimeIpAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastTimeMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastTimeMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastTimeVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DeletedUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Online" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TechIntTracker" Member="TechIntTrackers">
+    <Type Name="TechIntTracker">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrackId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InternalRef" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractorTrackIdInternal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IssueDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueByDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysOpen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DepartmentInternal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EscalationComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="AssignedToPerson" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TechnicianAssigned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EsomRef" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationComplDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DLP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationCPPA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UpdatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Testing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ReportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InspectionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TechIntTrackerArchive" Member="TechIntTrackerArchives">
+    <Type Name="TechIntTrackerArchive">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TrackId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="InternalRef" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractorTrackIdInternal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IssueDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueByDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysOpen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DepartmentInternal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EscalationComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="AssignedToPerson" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TechnicianAssigned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EsomRef" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationComplDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FollowUp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DLP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscalationCPPA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HostMachine" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HostMaccAdress" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IPAdress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WindowsAccount" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UpdatedByVersion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Testing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateReceived" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ReportDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InspectionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.ICTReport" Member="ICTReports">
+    <Type Name="ICTReport">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GroupItem" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="System" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RequiredTest" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RefranceRange" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AHUID" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="HRH_Office_E_A1087_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Private_Salon_E_A1095_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_M_Bedroom_1_E_A1098_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Dress_E_A1097_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Dress_E_A1094_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Gym_N_A1083_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Gym_Weight_Store_E_A1085_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Gym_Cardio_Exercise_space_N_A1096_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PM_Barber__EA1109_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Terrace_E_A1106_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Shared_Terrace_E_A1103_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Shared_Lounge_Salon_E_A1101_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Shared_Lounge_Salon_2_E_A1101_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Terrace_E_A1105_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_M_Bedroom_2_E_A1003_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Bedroom_Dress_E_A1002_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Private_Salon_E_A1007_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Private_Salon_Terrace_E_A1008_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Jewelry_Salon_E_A1011_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Barber_E_A1010_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Dress_E_A1006_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Dress_E_A1005_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Hallway_E_A1092_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Doctor_Bedroom_1_E_A1016_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Doctor_Bedroom_2_E_A1019_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Study_Room_Salon_E_A1044_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[Games_&amp;_Dining_Room_Lounge_E_A1033_A]" Member="Games___Dining_Room_Lounge_E_A1033_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Doctors_Salon_E_A1020_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_6_E_A1031_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_5_E_A1047_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_4_E_A1038_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_3_E_A1037_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_2_E_A1034_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_1_E_A1053_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Bedroom_1_Salon_Reading_room_E_A1052_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[Kids_Bedroom_1_Gallery/Dining_E_A1054_A]" Member="Kids_Bedroom_1_Gallery_Dining_E_A1054_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Master_Bedroom_E_A1064_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nannys_Room_E_A1058_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Dining_Room_Salon_E_A1057_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Salon_E_A1056_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Entertainment_Terrace_E_A1060_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Playroom_Terrace_E_A1060_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Kids_Terrace_E_A1060_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_HM_Office_E_AG090_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Waiting_Salon_Private_salon__E_AG091_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Oriental_Majilis_Salon_E_AG087_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Oriental_Lounge_E_AG086_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Dining_E_AG079_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Salon_E_AG084_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Main_Entrance_E_AG094_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Grand_Majilis_Salon_E_AG095_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Grand_Dining_E_AG096_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Informal_Salon_E_AG072_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Princess_Her_Entrance_E_AG070_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Princess_Her_Entrance_Salon_E_AG182_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Her_Swimming_Pool_E_AG125_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Buffet_Counter_Dining_area_E_AG119_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Panoramic_Lounge_E_AG121_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Family_Pool_Salon_E_AG140_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[Manicure/Pedicure_Room_N_AG138_A]" Member="Manicure_Pedicure_Room_N_AG138_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Dressing_Room_E_AG137_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Massage_Room_N_AG136_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Relaxation_Lounge_E_AG127_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Gymnasium_N_AG180_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Barber_Salon_E_AG177_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Pool_Salon_2_E_AG150_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Swimming_Pool_E_AG146_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Pool_Salon_1_E_AG143_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HRH_Pool_Dining_E_AG147_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Salon_E_AG154_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Bedroom_3_E_AG156_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Bedroom_2_E_AG163_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Bedroom_1_E_AG166_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guest_Master_Bedroom_E_AG167_A" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.AssignedToFilter" Member="AssignedToFilters">
+    <Type Name="AssignedToFilter">
+      <Column Name="AssignedTo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.DepartmentEsomFilter" Member="DepartmentEsomFilters">
+    <Type Name="DepartmentEsomFilter">
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.DepartmentRefFilter" Member="DepartmentRefFilters">
+    <Type Name="DepartmentRefFilter">
+      <Column Name="DepartmentRef" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.EscalatedToFilter" Member="EscalatedToFilters">
+    <Type Name="EscalatedToFilter">
+      <Column Name="EscalatedTo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.LocationDetailsFilter" Member="LocationDetailsFilters">
+    <Type Name="LocationDetailsFilter">
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.LocationDetailsSharmaFilteer" Member="LocationDetailsSharmaFilteers">
+    <Type Name="LocationDetailsSharmaFilteer">
+      <Column Name="LocationDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.LocationFilter" Member="LocationFilters">
+    <Type Name="LocationFilter">
+      <Column Name="Location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.LocationFilterSharma" Member="LocationFilterSharmas">
+    <Type Name="LocationFilterSharma">
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.PriorityFilter" Member="PriorityFilters">
+    <Type Name="PriorityFilter">
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.PriorityFilterSharma" Member="PriorityFilterSharmas">
+    <Type Name="PriorityFilterSharma">
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.ReportedByFilter" Member="ReportedByFilters">
+    <Type Name="ReportedByFilter">
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.ReportedByFilterSharma" Member="ReportedByFilterSharmas">
+    <Type Name="ReportedByFilterSharma">
+      <Column Name="ReportedBy" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.SpecLocationFilter" Member="SpecLocationFilters">
+    <Type Name="SpecLocationFilter">
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.SpecLocationSharmaFilter" Member="SpecLocationSharmaFilters">
+    <Type Name="SpecLocationSharmaFilter">
+      <Column Name="SpecificLocation" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.StatusFilter" Member="StatusFilters">
+    <Type Name="StatusFilter">
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.StatusFilterSharma" Member="StatusFilterSharmas">
+    <Type Name="StatusFilterSharma">
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.SubLocationFilter" Member="SubLocationFilters">
+    <Type Name="SubLocationFilter">
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.SubLocationSharmaFilter" Member="SubLocationSharmaFilters">
+    <Type Name="SubLocationSharmaFilter">
+      <Column Name="SublocationArea" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.TypeFilter" Member="TypeFilters">
+    <Type Name="TypeFilter">
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="avitsql.TypeFilterSharma" Member="TypeFilterSharmas">
+    <Type Name="TypeFilterSharma">
+      <Column Name="Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.ClosedByFilter" Member="ClosedByFilters">
+    <Type Name="ClosedByFilter">
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.ClosedByFilterSharma" Member="ClosedByFilterSharmas">
+    <Type Name="ClosedByFilterSharma">
+      <Column Name="ClosedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.CompletedByFilter" Member="CompletedByFilters">
+    <Type Name="CompletedByFilter">
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.CompletedByFilterSharma" Member="CompletedByFilterSharmas">
+    <Type Name="CompletedByFilterSharma">
+      <Column Name="EscalCompletedBy" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.DepartmentEsomFilterSharma" Member="DepartmentEsomFilterSharmas">
+    <Type Name="DepartmentEsomFilterSharma">
+      <Column Name="DepartmentEsom" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.LocationBuildingAYFilter" Member="LocationBuildingAYFilters">
+    <Type Name="LocationBuildingAYFilter">
+      <Column Name="BuildingId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="florent_avitsql.LocationBuildingSharmaFilter" Member="LocationBuildingSharmaFilters">
+    <Type Name="LocationBuildingSharmaFilter">
+      <Column Name="BuildingId" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

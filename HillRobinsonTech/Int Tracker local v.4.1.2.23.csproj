@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FB5B70A-E92A-41E3-89F9-D97AB76150B1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HillRobinsonTech</RootNamespace>
+    <AssemblyName>Int Tracker v.4.1.2.23</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Int Tracker System Desktop</ProductName>
+    <PublisherName>Florentin Mitan</PublisherName>
+    <SuiteName>Int Tracker System</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>4.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2B117742DB943DCDEFFDF3CF2CE5A3160753C2F9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tech-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Article.Pdf">
+      <HintPath>..\..\new solutions\itextarticle\Article.Pdf\bin\Debug\Article.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="axinterop.acropdflib">
+      <HintPath>.\axinterop.acropdflib.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckBoxComboBox">
+      <HintPath>..\..\new solutions\CheckBoxComboBox\CheckBoxComboBox\bin\Debug\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckBoxComboBox.1.0.0.0.Fakes">
+      <HintPath>FakesAssemblies\CheckBoxComboBox.1.0.0.0.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="EASendMail, Version=7.8.0.3, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.8.0.3\lib\net45\EASendMail.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Redemption">
+      <HintPath>.\Interop.Redemption.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="IronPdf">
+      <HintPath>..\..\new solutions\IronPdf\net40\IronPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Meziantou.Framework.Win32.CredentialManager, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Meziantou.Framework.Win32.CredentialManager.1.4.2\lib\net461\Meziantou.Framework.Win32.CredentialManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Exchange.WebServices.Managed.Api.2.2.1.2\lib\net35\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\PdfSharp\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCBoxItem.cs" />
+    <Compile Include="CheckedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEdit.Designer.cs">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locations.Designer.cs">
+      <DependentUpon>Locations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorRecordSharma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractorRecordSharma.designer.cs">
+      <DependentUpon>ContractorRecordSharma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Criptare.cs" />
+    <Compile Include="OutlookEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutlookEmail.Designer.cs">
+      <DependentUpon>OutlookEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportInternalToPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportInternalToPDF.Designer.cs">
+      <DependentUpon>ExportInternalToPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportContractorToPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportContractorToPDF.Designer.cs">
+      <DependentUpon>ExportContractorToPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorRecordAlYamama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractorRecordAlYamama.Designer.cs">
+      <DependentUpon>ContractorRecordAlYamama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filters.Designer.cs">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactsEdit.Designer.cs">
+      <DependentUpon>ContactsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalRecordAlYamama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalRecordAlYamama.Designer.cs">
+      <DependentUpon>InternalRecordAlYamama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalRecordOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalRecordOld.designer.cs">
+      <DependentUpon>InternalRecordOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntTrackerSharma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntTrackerSharma.Designer.cs">
+      <DependentUpon>IntTrackerSharma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntTrackerAlYamama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntTrackerAlYamama.Designer.cs">
+      <DependentUpon>IntTrackerAlYamama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorRecordInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractorRecordInfo.designer.cs">
+      <DependentUpon>ContractorRecordInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleEdit.Designer.cs">
+      <DependentUpon>RoleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PermissionEdit.Designer.cs">
+      <DependentUpon>PermissionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles.designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnivSource.cs" />
+    <Compile Include="UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permissions.Designer.cs">
+      <DependentUpon>Permissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntTrackerEditOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntTrackerEditOld.Designer.cs">
+      <DependentUpon>IntTrackerEditOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechDbo.cs">
+      <DependentUpon>TechDbo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TechDbo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechDbo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="IntTrackerFormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntTrackerFormInfo.designer.cs">
+      <DependentUpon>IntTrackerFormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Version.designer.cs">
+      <DependentUpon>Version.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LocationEdit.resx">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locations.resx">
+      <DependentUpon>Locations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractorRecordSharma.resx">
+      <DependentUpon>ContractorRecordSharma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutlookEmail.resx">
+      <DependentUpon>OutlookEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportInternalToPDF.resx">
+      <DependentUpon>ExportInternalToPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportContractorToPDF.resx">
+      <DependentUpon>ExportContractorToPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractorRecordAlYamama.resx">
+      <DependentUpon>ContractorRecordAlYamama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filters.resx">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactsEdit.resx">
+      <DependentUpon>ContactsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalRecordAlYamama.resx">
+      <DependentUpon>InternalRecordAlYamama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalRecordOld.resx">
+      <DependentUpon>InternalRecordOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntTrackerSharma.resx">
+      <DependentUpon>IntTrackerSharma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntTrackerAlYamama.resx">
+      <DependentUpon>IntTrackerAlYamama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractorRecordInfo.resx">
+      <DependentUpon>ContractorRecordInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleEdit.resx">
+      <DependentUpon>RoleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PermissionEdit.resx">
+      <DependentUpon>PermissionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permissions.resx">
+      <DependentUpon>Permissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntTrackerEditOld.resx">
+      <DependentUpon>IntTrackerEditOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntTrackerFormInfo.resx">
+      <DependentUpon>IntTrackerFormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Version.resx">
+      <DependentUpon>Version.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\CheckBoxComboBox.fakes" />
+    <None Include="certfiletosignwith.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\HillRobinsonTech.HillRobinsonTechDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTech.HillRobinsonTechDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTech.HillRobinsonTechDataSetTableAdapters.TechIntTrackerTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTech.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTech.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTech.Properties.Settings1.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTechDataSet.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTechDataSet.TechIntTrackerDataTable.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTechDataSet.TechIntTrackerRow.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTechDataSet.TechIntTrackerRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HillRobinsonTechDataSet.TechIntTrackerRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\IntTracker.datasource" />
+    <None Include="Properties\DataSources\IntTrackerEdit.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\TechDboDataContext.datasource" />
+    <None Include="Properties\DataSources\TechIntTracker.datasource" />
+    <None Include="TechDbo.dbml.layout">
+      <DependentUpon>TechDbo.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TechDbo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TechDbo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\simple-blue-background-abstract-photo-blue-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\background  4.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\background other.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\background other 5.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\240_F_365306265_saeJr7zGPl8ypAys1RxBUYgtQSoYmsOU.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\22764-colorful-high-resolution-background2222.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\29967c0267d58120fbcb043020b09858123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\blue-abstract-background555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Icons\Tech-icon.ico" />
+    <None Include="Resources\Tech1.ico" />
+    <Content Include="Tech-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ObjectListView\ObjectListView2012.csproj">
+      <Project>{18FEDA0C-D147-4286-B39A-01204808106A}</Project>
+      <Name>ObjectListView2012</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
