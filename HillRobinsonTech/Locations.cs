@@ -179,7 +179,8 @@ namespace HillRobinsonTech
             string searchText = SearchTBox.Text.ToString();
             string searchOption = SearchcBox.Text.ToString();
 
-            UnivSource.connection.Open();
+            SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+            connection.Open();
             System.Data.DataTable TrackDt = new System.Data.DataTable();
             System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
             DataSet ds = null;
@@ -189,7 +190,7 @@ namespace HillRobinsonTech
 
 
 
-            using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand(dbo, connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -295,7 +296,7 @@ namespace HillRobinsonTech
                     }
                     i++;
                 }
-                UnivSource.connection.Close();
+                connection.Close();
             }
             int itemsPerLastPage = 0;
             int lastPage = 0;

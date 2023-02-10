@@ -261,7 +261,12 @@ namespace HillRobinsonTech
         public static string CompletedWO = "";
         public static string WeekClosingWO = "";
 
+        //server connections
+        public static bool LocalServer = true;
+        public static bool CloudServer = false;
 
+        public static string LocalStringCon = "";
+        public static string CloudStringCon = "";
 
         //user list
         public static List<string> userListInDepartment = new List<string>();

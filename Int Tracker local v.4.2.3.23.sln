@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Int Tracker local v.4.1.2.23", "HillRobinsonTech\Int Tracker local v.4.1.2.23.csproj", "{9FB5B70A-E92A-41E3-89F9-D97AB76150B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Int Tracker local v.4.2.3.23", "HillRobinsonTech\Int Tracker local v.4.2.3.23.csproj", "{9FB5B70A-E92A-41E3-89F9-D97AB76150B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListView2012", "HillRobinsonTech\ObjectListView\ObjectListView2012.csproj", "{18FEDA0C-D147-4286-B39A-01204808106A}"
 EndProject

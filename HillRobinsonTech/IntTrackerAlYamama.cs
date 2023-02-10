@@ -116,7 +116,8 @@ namespace HillRobinsonTech
             string curWReportEYear = "";
             string CurWReportDate = "";
 
-            UnivSource.connection.Open();
+            SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+            connection.Open();
             System.Data.DataTable TrackDt = new System.Data.DataTable();
             System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
             DataSet ds = null;
@@ -124,7 +125,7 @@ namespace HillRobinsonTech
 
             string dbo = "[avitsql].[GetDataWeeklyReport]";
 
-            using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand(dbo, connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -179,7 +180,7 @@ namespace HillRobinsonTech
                         updateDataWeeklyReportDBO();
                     }
             }
-            UnivSource.connection.Close();
+            connection.Close();
         }
         public void updateDataWeeklyReportDBO()
         {
@@ -256,7 +257,8 @@ namespace HillRobinsonTech
             Util.ClosingDateOut = Util.ClosingDateOut != "" ? DateTime.Parse(Util.ClosingDateOut).ToString("yyyy-MM-dd") : Util.ClosingDateOut;
 
 
-            UnivSource.connection.Open();
+            SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+            connection.Open();
             System.Data.DataTable TrackDt = new System.Data.DataTable();
             System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
             DataSet ds = null;
@@ -264,7 +266,7 @@ namespace HillRobinsonTech
 
             string dbo = "[avitsql].[GetData]";
 
-            using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand(dbo, connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -415,7 +417,7 @@ namespace HillRobinsonTech
                     }
                     i++;
                 }
-                UnivSource.connection.Close();
+                connection.Close();
 
                 int itemsPerLastPage = 0;
                 int lastPage = 0;
@@ -1593,7 +1595,8 @@ namespace HillRobinsonTech
                 Util.DateCreatedOut = Util.DateCreatedOut != "" ? DateTime.Parse(Util.DateCreatedOut).ToString("yyyy-MM-dd") : Util.DateCreatedOut;
 
 
-                UnivSource.connection.Open();
+                SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+                connection.Open();
                 System.Data.DataTable TrackDt = new System.Data.DataTable();
                 System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
                 DataSet ds = null;
@@ -1605,7 +1608,7 @@ namespace HillRobinsonTech
                 {                   
                     string dbo = "[avitsql].[GetData]";
 
-                    using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+                    using (SqlCommand cmd = new SqlCommand(dbo, connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1753,7 +1756,7 @@ namespace HillRobinsonTech
                     }
                     i2++;
                 }
-                UnivSource.connection.Close();   
+                connection.Close();   
             }
 
             // AutoSet Cell Widths to Content Size

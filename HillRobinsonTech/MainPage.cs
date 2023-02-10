@@ -139,6 +139,13 @@ namespace HillRobinsonTech
             if (idleTime > 300000)
             {
                 disconnectUser();
+                for (int i = 1; i < Application.OpenForms.Count; ++i)
+                {
+                    if (Application.OpenForms[i].Name != "MainPage")
+                    Application.OpenForms[i].Close();
+                    // if (Application.OpenForms[i].Name != "FRM01"&&Application.OpenForms[i].Name!= "FRM02")
+                   // Application.OpenForms[i].Close();
+                }
                 this.Dispose();
                 Login form = new Login();
                 form.ShowDialog();

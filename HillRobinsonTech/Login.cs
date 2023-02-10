@@ -44,6 +44,14 @@ namespace HillRobinsonTech
             {
                 Util.userRolePermissions.Clear();
             }
+
+            if (Environment.UserName.ToLower().Contains("admin") || Environment.UserName.ToLower().Contains("red5"))
+                cBoxCredentials.Visible = false;
+
+            cBoxLocalList.SelectedIndex = 0;
+            cBoxCloudList.Enabled = false;
+            cBoxCloudList.SelectedIndex = -1;
+
         }
 
         public void checkVersion()
@@ -55,37 +63,40 @@ namespace HillRobinsonTech
             Util.versionDate = versionDate;
             Util.fullVersionInfo = (version.ToString() + "." + versionDate).ToString();
 
-
-            //check version, if older than dbo version block access
-            UnivSource.connection.Open();
-            System.Data.DataTable TrackDt = new System.Data.DataTable();
-            System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
-            DataSet ds = null;
-            SqlDataAdapter da = null;
-            string dbo = "[avitsql].[GetVersionCheck]";
-
-            using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+            if (getConnectionString() == true)
             {
-                cmd.CommandType = CommandType.StoredProcedure;
+                //check version, if older than dbo version block access
+                SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+                connection.Open();
+                System.Data.DataTable TrackDt = new System.Data.DataTable();
+                System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
+                DataSet ds = null;
+                SqlDataAdapter da = null;
+                string dbo = "[avitsql].[GetVersionCheck]";
 
-                cmd.Parameters.Add("@Version", SqlDbType.Float).Value = Util.version;
-                try
+                using (SqlCommand cmd = new SqlCommand(dbo, connection))
                 {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                using (da = new SqlDataAdapter(cmd))
-                {
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    cmd.Parameters.Add("@Version", SqlDbType.Float).Value = Util.version;
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
+                    using (da = new SqlDataAdapter(cmd))
+                    {
+                        ds = new DataSet();
+                        da.Fill(ds);
+
+                    }
                 }
+                connection.Close();
             }
-            UnivSource.connection.Close();
         }
 
         public void buton()
@@ -164,6 +175,7 @@ namespace HillRobinsonTech
 
                 k++;
             }
+           
 
             getUserPermissions(Util.userIdConnected);
 
@@ -250,9 +262,40 @@ namespace HillRobinsonTech
             }
         }
 
+        private bool getConnectionString()
+        {
+            if (rbtnLocalServer.Checked && cBoxLocalList.SelectedIndex > -1)// && cBoxLocalList.SelectedItem.ToString().Equals("10.19.107.154"))
+            {
+                UnivSource.connectionString = @"Data Source="+cBoxLocalList.Text+", 1433; Database=florent_hillrobinsontech_local; User ID=sa;Password=Mranderson1!";
+                return true;
+            }else
+
+            if (rbtnCloudServer.Checked && cBoxCloudList.SelectedIndex > -1)// && cBoxCloudList.SelectedItem.ToString().Equals("188.213.133.2,1533"))
+            {
+                UnivSource.connectionString = @"Data Source=" + cBoxCloudList.Text + ",1533; Database=florent_hillrobinsontech; User ID=florent_avitsql;Password=BlackMatza777!!!???";
+                return true;
+            }
+
+            else
+             if ((cBoxLocalList.SelectedIndex == -1 && cBoxCloudList.SelectedIndex == -1)
+                  || (rbtnLocalServer.Checked && cBoxLocalList.SelectedIndex == -1)
+                  || (rbtnCloudServer.Checked && cBoxCloudList.SelectedIndex == -1))
+            {
+                MessageBox.Show("Please select a valid server!");
+                return false;
+            }
+            else
+                return false;
+
+            //string connectionString = @"Data Source=10.19.107.154, 1433; Database=florent_hillrobinsontech_local; User ID=sa;Password=Mranderson1!";
+            //@"Data Source=188.213.133.2,1533; Database=florent_hillrobinsontech; User ID=florent_avitsql;Password=BlackMatza777!!!???";
+            //@"Data Source=188.213.132.104,1533; User ID=avitsql;Password=Mranderson1!";
+        }
+
         private void getUserPermissions(int userId)
         {
-            UnivSource.connection.Open();
+            SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+            connection.Open();
             //get user role permissions
             DataTable TrackDt = new DataTable();
             //System.Data.DataTable TrackDtAllRows = new System.Data.DataTable();
@@ -260,7 +303,7 @@ namespace HillRobinsonTech
             SqlDataAdapter da = null;
             string dbo = "[dbo].[GetUserRolePermission]";
 
-            using (SqlCommand cmd = new SqlCommand(dbo, UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand(dbo, connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -291,7 +334,7 @@ namespace HillRobinsonTech
             SqlDataAdapter da2 = null;
             string dbo2 = "[avitsql].[GetUserPermission]";
 
-            using (SqlCommand cmd = new SqlCommand(dbo2, UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand(dbo2, connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -314,26 +357,32 @@ namespace HillRobinsonTech
                     }
                 }
             }
-            UnivSource.connection.Close();
+            connection.Close();
         }
 
         private void btlogin_Click(object sender, EventArgs e)
         {
             //checkVersion();
 
-            DateTime dtlimit = new DateTime(2023, 3, 1); //DateTime.Parse("12/31/2021");//till license is built!!!
-            DateTime dtToday = DateTime.Today;
-
-            if (dtlimit.Date > dtToday.Date)
+            if (getConnectionString() == true)
             {
-                buton();
-            }
-            else
-            {
-                MessageBox.Show("You need to set up the new version of the app to continue!");
-            }
 
-            //buton();
+
+                DateTime dtlimit = new DateTime(2024, 3, 1); //DateTime.Parse("12/31/2021");//till license is built!!!
+                DateTime dtToday = DateTime.Today;
+
+                if (dtlimit.Date > dtToday.Date)
+                {
+                    buton();
+                }
+                else
+                {
+                    MessageBox.Show("You need to set up the new version of the app to continue!");
+                }
+
+                //buton();
+            }
+            
         }
 
         private void cBoxguest_CheckStateChanged(object sender, EventArgs e)
@@ -404,7 +453,7 @@ namespace HillRobinsonTech
 
             //if (e.KeyCode == Keys.Enter)
             //{
-                DateTime dtlimit = new DateTime(2023, 3, 1); //DateTime.Parse("12/31/2021");//till license is built!!!
+                DateTime dtlimit = new DateTime(2024, 3, 1); //DateTime.Parse("12/31/2021");//till license is built!!!
                 DateTime dtToday = DateTime.Today;
 
                 if (dtlimit.Date > dtToday.Date)
@@ -428,7 +477,7 @@ namespace HillRobinsonTech
         {
             // Save the credential to the credential manager
             CredentialManager.WriteCredential(
-                applicationName: "Int Tracker local v.4.1.2.23",
+                applicationName: "Int Tracker",
                 userName: tBoxuser.Text,//"meziantou",
                 secret: tBoxpass.Text,//"Pa$$w0rd",
                 //comment: "Test",
@@ -444,11 +493,61 @@ namespace HillRobinsonTech
         }
 
         private void tBoxuser_Click(object sender, EventArgs e)
-        {
+        {            
             // Get a credential from the credential manager
-            var cred = CredentialManager.ReadCredential(applicationName: "Int Tracker local v.4.1.2.23");
-            tBoxuser.Text = cred.UserName;
-            tBoxpass.Text = cred.Password;
+            var cred = CredentialManager.ReadCredential(applicationName: "Int Tracker");
+            if (cred != null)
+            {
+                tBoxuser.Text = cred.UserName;
+                tBoxpass.Text = cred.Password;
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBoxuser_TextChanged(object sender, EventArgs e)
+        {
+            if(tBoxuser.Text.Contains("florentin.m"))
+            {
+                groupBox1.Visible = true;
+                rbtnLocalServer.Visible = true;
+                cBoxLocalList.Visible = true;
+
+                rbtnCloudServer.Visible = true;
+                cBoxCloudList.Visible = true;
+            }
+            else
+            {
+                groupBox1.Visible = false;
+                rbtnLocalServer.Visible = false;
+                cBoxLocalList.Visible = false;
+
+                rbtnCloudServer.Visible = false;
+                cBoxCloudList.Visible = false;
+            }
+        }
+
+        private void rbtnLocalServer_CheckedChanged(object sender, EventArgs e)
+        {
+            cBoxCloudList.SelectedIndex = -1;
+            cBoxCloudList.Enabled = false;
+            cBoxLocalList.Enabled = true;
+            cBoxLocalList.SelectedIndex = 0;
+            Util.LocalServer = true;
+            Util.CloudServer = false;            
+        }
+
+        private void rbtnCloudServer_CheckedChanged(object sender, EventArgs e)
+        {
+            cBoxLocalList.SelectedIndex = -1;
+            cBoxLocalList.Enabled = false;
+            cBoxCloudList.Enabled = true;
+            cBoxCloudList.SelectedIndex = 0;
+            Util.LocalServer = false; 
+            Util.CloudServer = true;
         }
 
         //private void infoBtn_Click(object sender, EventArgs e)

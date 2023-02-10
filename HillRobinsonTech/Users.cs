@@ -216,12 +216,13 @@ namespace HillRobinsonTech
             int totalRows = 0;
             int curRow = 0;
 
-            UnivSource.connection.Open();
+            SqlConnection connection = new SqlConnection(UnivSource.connectionString);
+            connection.Open();
             System.Data.DataTable UserList = new System.Data.DataTable();
             DataSet ds = null;
             SqlDataAdapter da = null;
 
-            using (SqlCommand cmd = new SqlCommand("[avitsql].[GetUserList]", UnivSource.connection))
+            using (SqlCommand cmd = new SqlCommand("[avitsql].[GetUserList]", connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -291,7 +292,7 @@ namespace HillRobinsonTech
                 if (pageNr == lastPage || totalRows == 0)
                     showlbl.Text = "Displaying " + itemsPerLastPage + "  user(s) of " + totalRows;
 
-                UnivSource.connection.Close();
+                connection.Close();
 
                 
             }
